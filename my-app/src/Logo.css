@@ -1,0 +1,64 @@
+/* Center the entire logo on the page */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2b2b2b; /* Dark background */
+  }
+  
+  /* Create the diamond shape by rotating a square */
+  .diamond {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg); /* Rotate square to create diamond */
+    background-color: #2b2b2b; /* Match background color */
+  }
+  
+  /* Create the borders with pseudo-elements */
+  .diamond::before,
+  .diamond::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 20px solid transparent;
+    box-sizing: border-box;
+  }
+  
+  .diamond::before {
+    top: 0;
+    left: 0;
+    border-color: #00c8fa transparent transparent #b66dff; /* Blue and Purple */
+  }
+  
+  .diamond::after {
+    bottom: 0;
+    right: 0;
+    border-color: transparent #00d8a7 #fa7850 transparent; /* Green and Orange */
+  }
+  
+  /* Center and rotate the text within the diamond */
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate text back */
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Adjust the font size and style */
+  .text h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .text p {
+    margin: 5px 0 0;
+    font-size: 12px;
+  }
+  
